@@ -1,8 +1,19 @@
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import Link from '@mui/material/Link';
-import avatar from './images/avatar/JasonRhoads.JPG'
-
+import blog_freemote from './images/blog_freemote.jpg'
+import coming_soon_mobile from './images/coming_soon_mobile.jpg'
+import coming_soon_old_landscape from './images/coming_soon_old_landscape.jpg'
+import coming_soon_old_phone from './images/coming_soon_old_phone.jpg'
+import coming_soon_old_portrait from './images/coming_soon_old_portrait.jpg'
+import coming_soon_phone from './images/coming_soon_phone.jpg'
+import coming_soon from './images/coming_soon.jpg'
+import crypto from './images/crypto_list.png'
+import maxstrong from './images/maxstrong.jpg'
+import order_summary from './images/order_summary.jpg'
+import order_summary_mobile from './images/order_summary_mobile.jpg'
+import portraits_jwr from './images/portraits_jwr.jpg'
+import shopify_store from './images/shopify_store_home_screen.jpg'
 
 import  {
     SectionContainer, 
@@ -10,47 +21,48 @@ import  {
     SectionHeaderBackground, 
 
 } from './StyledComponents';
+import { max } from '@floating-ui/utils';
 
 
 let portfolio = {
     1 : {
-        "name": "number 1",
-        "image": avatar,
-        "link": "#"
+        "name": "Portraits by James",
+        "image": portraits_jwr,
+        "link": "https://jameswrhoads.com/"
     },
     2 : {
-        "name": "number 2",
-        "image": "img",
+        "name": "Order interface",
+        "image": order_summary_mobile,
         "link": "#"
     },
     3 : {
-        "name": "number 3",
-        "image": "img",
+        "name": "Original brand design",
+        "image": coming_soon_old_landscape,
         "link": "#"
     },
     4 : {
-        "name": "number 4",
-        "image": "img",
+        "name": "Brand Redesign",
+        "image": coming_soon,
         "link": "#"
     },
     5 : {
-        "name": "number 5",
-        "image": "img",
+        "name": "Freemote blog design",
+        "image": blog_freemote,
         "link": "#"
     },
     6 : {
-        "name": "number 6",
-        "image": "img",
+        "name": "MaxStrong",
+        "image": maxstrong,
         "link": "#"
     },
     7 : {
-        "name": "number 7",
-        "image": "img",
+        "name": "Shopify Store",
+        "image": shopify_store,
         "link": "#"
     },
     8 : {
-        "name": "number 8",
-        "image": "img",
+        "name": "Crypto tracker",
+        "image": crypto,
         "link": "#"
     }
 }
@@ -63,17 +75,17 @@ export default function PortfolioSection() {
         <SectionHeader>
           <h2 className='h1'>Portfolio</h2>
         </SectionHeader>
-        <Grid className="portfolio-grid" container spacing={{xs: 2, md: 3, lg: 5}}> 
+        {/* spacing={{xs: 2, md: 3, lg: 5}} */}
+        <Grid className="portfolio-grid" container > 
             {Object.keys(portfolio).map((project) => (
-                <>
-                {console.log(project)}
                 <Grid xs={12} sm={6} md={3} key={project}>
-                    <Paper className='grid-item'>
-                        <img className="portfolio-image" src={avatar} alt={portfolio[project].name}/>
-                        <Link href={portfolio[project].link}>{portfolio[project].name}</Link>
-                    </Paper>
+                    <Link href={portfolio[project].link} target="_blank">
+                        <Paper className='grid-item'>
+                            <img className="portfolio-image" src={portfolio[project].image} alt={portfolio[project].name}/>
+                            <p>{portfolio[project].name}</p> 
+                        </Paper>
+                    </Link>
                 </Grid>
-                </>
             ))}  
         </Grid>
       </SectionContainer>

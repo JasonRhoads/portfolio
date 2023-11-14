@@ -2,6 +2,7 @@
 import TopNav from './TopNav';
 import HeroSection from './HeroSection';
 import PortfolioSection from './PortfolioSection';
+import ContactSection from './ContactSection';
 
 import { 
   OuterContainer, 
@@ -27,13 +28,7 @@ function App() {
           <h3 className='h1'>Born to build</h3>
           <p>I have always loved building things, from Legos, model cars, miniatures, and websites. Exciting new technologies have emerged over the years that allow people to create their own unique space on the internet. I am here to help you with yours!</p>
       </SectionContainer>
-      <SectionContainer id="contact" className='section-container'>
-        <SectionHeaderBackground />
-        <SectionHeader>
-         <h2 className='h1'>Contact</h2>
-        </SectionHeader>
-        Contact
-      </SectionContainer>
+      <ContactSection />
     </OuterContainer>
     </>
   );

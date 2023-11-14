@@ -175,11 +175,30 @@ header {
   height: 50px;
 }
 
-.grid-item {
-  background: orange;
+.portfolio-grid {
+  padding: 5%;
 }
 
+.grid-item {
+  height: 200px;
+}
+
+.grid-item:hover {
+  font-size: large;
+  position: relative;
+  width: 300px;
+  z-index: 5;
+}
+
+.grid-item:not(:hover) {
+  background: blue;
+  position: relative;
+  z-index: 1;
+}
+
+
 .portfolio-image {
+  
   width: 100%;
 }
 
