@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import TopNav from './TopNav';
+import { OuterContainer, SectionContainer, SectionHeader, SectionHeaderBackground } from './StyledComponents';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <TopNav></TopNav>
+    <OuterContainer>
+      <SectionContainer id="home" className='section-container'>
+        <SectionHeaderBackground />
+        <SectionHeader>
+          <h1 className='h1'>Home</h1>
+        </SectionHeader>
+        Hero
+      </SectionContainer>
+      <SectionContainer id="portfolio" className='section-container'>
+        <SectionHeaderBackground />
+        <SectionHeader>
+          <h2 className='h1'>Portfolio</h2>
+        </SectionHeader>
+        Portfolio
+      </SectionContainer>
+      <SectionContainer id="about" className='section-container'>
+        <SectionHeaderBackground />
+        <SectionHeader>
+          <h2 className='h1'>About</h2>
+        </SectionHeader>
+        About
+      </SectionContainer>
+      <SectionContainer id="contact" className='section-container'>
+        <SectionHeaderBackground />
+        <SectionHeader>
+         <h2 className='h1'>Contact</h2>
+        </SectionHeader>
+        Contact
+      </SectionContainer>
+    </OuterContainer>
+    </>
   );
 }
 
