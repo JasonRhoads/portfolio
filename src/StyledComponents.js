@@ -22,7 +22,7 @@ export const SectionHeader = styled(Box) (() => ({
     height: "50px",
     margin: "-50px auto 0",
     justifyContent: "center",
-    width: "150px",
+    width: "205px",
     zIndex: "6",
 }));
 

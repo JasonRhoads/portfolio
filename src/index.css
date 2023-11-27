@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -51,7 +52,33 @@ header {
   scroll-snap-align: start;
 }
 
+#home {
+  background-image: url(./images/mountRanier.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#portfolio {
+  background-image: url(./images/cyberpunkBackground.png);
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+
+.hero-avatar {
+  height: 250px;
+  object-position: bottom;
+  
+  width: 250px;
+}
+
 .h1 {
   font-size: 2rem;
   height: 50px;
+}
+
+.grid-item {
+  background: orange;
 }
