@@ -1,5 +1,16 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-snap-stop: mandatory;
+}
+
+body {
+  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -9,5 +20,172 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+
+header {
+  background-color: black;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+.top-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+}
+
+.top-nav-links {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  min-width: 30%;
+  z-index: 9;
+}
+
+.top-nav-links a {
+  align-content: center;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 85px;
+}
+
+.top-nav-links a ~ a {
+  border-left: 1px solid #1976d2;
+}
+
+.top-nav-links a:hover {
+  color: black;
+  cursor: pointer;
+  font-weight: 700;
+  
+  background: rgba(0,0,0,1);
+  background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(25,118,210,1) 52%, rgba(0,0,0,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(52%, rgba(25,118,210,1)), color-stop(100%, rgba(0,0,0,1)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(25,118,210,1) 52%, rgba(0,0,0,1) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(25,118,210,1) 52%, rgba(0,0,0,1) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(25,118,210,1) 52%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(25,118,210,1) 52%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+
+/* .top-nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.top-nav a:hover {
+  background-color: #e0e0e0;
+}
+
+.top-nav a.active {
+  background-color: #ddd;
+} */
+
+.section-container {
+  text-align: center;
+}
+
+/* .parallax {
+  position: relative;
+  min-height: 90svh;
+  display: grid;
+  grid-template-areas: "stack";
+  z-index: 0;
+}
+
+.parallax > * {
+  animation: parallax linear;
+  animation-timeline: scroll();
+  grid-area: stack;
+}
+
+.parallax1 {
+  --parallax-speed: 1;
+  position: absolute;
+  top: 50px;
+}
+
+.parallax2 {
+  --parallax-speed: -10;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+}
+
+.parallax3 {
+  --parallax-speed: -5;
+  position: absolute;
+  top: 200px;
+}
+
+.parallax4 {
+  --parallax-speed: -15;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(calc(var(--parallax-speed) * 200px));
+  }
+} */
+
+#home {
+  background-image: url(./images/mountRanier.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#portfolio {
+  background-image: url(./images/cyberpunkBackground.png);
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+
+.hero-avatar {
+  height: 250px;
+  object-position: bottom;
+  
+  width: 250px;
+}
+
+.h1 {
+  font-size: 2rem;
+  height: 50px;
+}
+
+.grid-item {
+  background: orange;
+}
+
+.portfolio-image {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  h1, h2 {
+    padding-left: 50px;
+    text-align: left;
+  }
 }
