@@ -52,26 +52,6 @@ let portfolio = {
         "name": "number 8",
         "image": "img",
         "link": "#"
-    },
-    9 : {
-        "name": "number 9",
-        "image": "img",
-        "link": "#"
-    },
-    10 : {
-        "name": "number 10",
-        "image": "img",
-        "link": "#"
-    },
-    11 : {
-        "name": "number 11",
-        "image": "img",
-        "link": "#"
-    },
-    12 : {
-        "name": "number 12",
-        "image": "img",
-        "link": "#"
     }
 }
 
